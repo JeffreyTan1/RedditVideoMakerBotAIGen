@@ -71,11 +71,13 @@ def get_screenshots_of_reddit_posts(reddit_object: dict, screenshot_num: int):
     if storymode and settings.config["settings"]["storymodemethod"] == 1:
         # for idx,item in enumerate(reddit_object["thread_post"]):
         print_substep("Generating images...")
+        bgcolor=(33, 33, 36, 195)
         return imagemaker(
             theme=bgcolor,
             reddit_obj=reddit_object,
             txtclr=txtcolor,
             transparent=transparent,
+            padding=2,
         )
 
     screenshot_num: int
