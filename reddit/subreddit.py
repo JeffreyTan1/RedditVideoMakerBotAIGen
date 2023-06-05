@@ -172,12 +172,5 @@ def get_subreddit_threads(POST_ID: str):
                             )
 
     print_substep("Received subreddit threads Successfully.", style="bold green")
-    
-    # serialize the content object to a json file
-    import json
-    with open("content.json", "w") as f:
-        json.dump(content, f, indent=4)
-    
-    
         
     return content
