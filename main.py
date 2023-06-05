@@ -46,7 +46,9 @@ checkversion(__VERSION__)
 
 def main(POST_ID=None) -> None:
     global redditid, reddit_object
-    reddit_object = get_subreddit_threads(POST_ID)
+    # reddit_object = get_subreddit_threads(POST_ID)
+    import json
+    reddit_object = json.loads(open("content.json", "r").read())
     redditid = id(reddit_object)
     length, number_of_comments = save_text_to_mp3(reddit_object)
     length = math.ceil(length)
